@@ -34,7 +34,15 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 /* Grouping content
@@ -361,7 +369,7 @@ html {
  * Basic styles for links
  */
 a {
-  color: #333;
+  color: #d59541;
   text-decoration: none;
 }
 a:hover, a:active, a:focus {
@@ -429,6 +437,20 @@ body {
 /**
  * Basic typography style for copy text
  */
+.generic-content-container p {
+  line-height: 1.65;
+  margin: 1.8rem 0;
+  font-size: 1.125rem;
+}
+@media (min-width: 530px) {
+  .generic-content-container p {
+    font-size: 1rem;
+  }
+}
+.generic-content-container p a {
+  font-weight: 700;
+}
+
 /**
  * Clear inner floats
  */
@@ -613,6 +635,24 @@ body {
   .large-hero__description {
     font-size: 1.875rem;
   }
+}
+
+.row {
+  display: block;
+}
+@media (min-width: 800px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+}
+
+.col1 img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
